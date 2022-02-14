@@ -17,17 +17,20 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
 
 ### Installation
 
-It is recommended that users install the pipeline in their Google Drive by following the instructions in this short Colab notebook (requires a Google Account, which is available for free): https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing. If you wish to install the pipeline on your local machine you can run the following command (requires Git: https://github.com/git-guides/install-git). You will also need to procure your own reference genome. 
+It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing (requires a Google Account). The pipeline can be installed on a local machine with the following command (requires Git: https://github.com/git-guides/install-git). Users are expected to provide their own reference genomes on their local machine. 
 ```bash
 github clone https://github.com/Theo-Nelson/long-read-sequencing-pipeline
 ```
-Once this is complete you can open the file ```long_read_rna_seq_analysis_prebuilt_indices.ipynb``` either in Google Colaboratory or on your local machine and begin working with the pipeline.
+
+Two of the programs within this pipeline require more than 12 GB of memory. [Google Colab Pro](https://colab.research.google.com/signup), a service which costs $10/month, provides up to 25 GB of RAM. There are alternative programs that perform the same functions for users working with free version of Google Colaboratory.  
+
+Once installation is complete, users should open ```long_read_rna_seq_analysis_prebuilt_indices.ipynb``` to begin working with the pipeline.
 
 ---
 
 ### Features
 
-Links to documentation for each software package can be found in the notebook file. The features are colored by importance: red programs are critical for successful generation of aligned files, blue are optional but additive, while green denotes software suitable for advanced users. 
+Links to the official documentation for each software package can be found in ```long_read_rna_seq_analysis_prebuilt_indices.ipynb```. Here, we describe the general function of the programs and color them by importance: red programs are critical for successful generation of aligned reads, blue are optional but additive, while green denotes software suitable for advanced users. 
 
 #### Parameter Input and User Instructions ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 This section allows you to setup and automate the remainder of the analysis. Most parameters are necessary for specific programs, but four specific variables: ```PIPELINE_FILE_PATH```, ```ACC```, ```INDEX_FILE_PATH``` and ```ANNOTATION_FILE_PATH``` are critical. Please note that ```PARTITIONED_INDEX_FILE_PATH``` takes the place of ```INDEX_FILE_PATH``` if you are using minimap2 featherweight alignment (described below). The pipeline file path describes where in your Google Drive file system or local file system the pipeline is set up. The ACC variable specifies either the FASTQ file on your machine containing long-read sequencing data or the run accession number (e.g. [SRR12389274](https://www.ebi.ac.uk/ena/browser/view/SRR12389274)) for the publically available file which you wish to analyze. You can search for samples relevant to your field of interest with the European Nucleotide Archive's Advanced Search Feature: https://www.ebi.ac.uk/ena/browser/advanced-search (tutorial: https://www.youtube.com/watch?v=ugLaYRgh1pE). The index file path describes where the reference genome exists within your file system; the annotation file path describes where the reference annotation exists in the same file system. 
