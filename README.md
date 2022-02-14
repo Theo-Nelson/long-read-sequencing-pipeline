@@ -24,7 +24,7 @@ github clone https://github.com/Theo-Nelson/long-read-sequencing-pipeline
 
 Two of the programs within this pipeline require more than 12 GB of memory. [Google Colab Pro](https://colab.research.google.com/signup), a service which costs $10/month, provides up to 25 GB of RAM. There are alternative programs that perform the same functions for users working with free version of Google Colaboratory.  
 
-Once installation is complete, users should open ```long_read_rna_seq_analysis_prebuilt_indices.ipynb``` to begin working with the pipeline.
+Once installation is complete, users should open ```long_read_rna_seq_analysis_prebuilt_indices.ipynb``` to begin working with the pipeline. For first-time users Colaboratory can be installed by searching for ```Colaboratory``` after pressing ```+ Connect more apps```.
 
 ---
 
