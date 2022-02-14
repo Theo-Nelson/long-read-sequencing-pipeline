@@ -17,7 +17,7 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
 
 ### Installation
 
-It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing (requires a Google Account). The pipeline can be installed on a local machine with the following command (requires Git: https://github.com/git-guides/install-git). Users are expected to provide their own reference genomes on their local machine. 
+It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing (requires a Google Account). The pipeline can be installed on a local machine with the following command (requires Git: https://github.com/git-guides/install-git). Users are expected to provide their own reference genomes on their local machine. Ensembl reference annotations for a large number of species can be accessed at the following address: http://ftp.ensembl.org/pub/
 ```bash
 github clone https://github.com/Theo-Nelson/long-read-sequencing-pipeline
 ```
