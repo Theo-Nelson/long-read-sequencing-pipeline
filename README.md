@@ -255,4 +255,4 @@ to be added.
 
 ### Contributors
 
-This pipeline was developed by [Theodore Nelson](https://github.com/Theo-Nelson) at Columbia University Irving Medical Center. 
+This pipeline was developed by [Theodore Nelson](https://github.com/Theo-Nelson) at the Columbia University Irving Medical Center. 
