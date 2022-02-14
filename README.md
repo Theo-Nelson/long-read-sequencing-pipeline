@@ -29,7 +29,7 @@ Once this is complete you can open the file ```long_read_rna_seq_analysis_prebui
 
 ### Features
 
-Links to documentation for each software package can be found in the notebook file. The features are colored by importance: red are critical for successful generation of aligned files, blue are optional but additive, while green denotes programs suitable for advanced users. 
+Links to documentation for each software package can be found in the notebook file. The features are colored by importance: red programs are critical for successful generation of aligned files, blue are optional but additive, while green denotes software suitable for advanced users. 
 
 #### Parameter Input and User Instructions ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 
