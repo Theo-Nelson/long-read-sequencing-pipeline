@@ -9,9 +9,7 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
   - [Installation](#installation)
   - [Features](#features)
   - [General Usage](#general-usage)
-  - [Advanced options](#advanced-options)
   - [Details on the output](#details-on-the-output)
-  - [Complementary functions](#complementary-functions)
   - [Citation](#citation)
   - [Contributors](#contributors)
 
@@ -71,7 +69,7 @@ This tool will generate a graph of read coverage (i.e. how many reads align to a
 This time-intensive tool will generate statistics regarding the aligned long-read sequences, including the number of novel transcripts within your sample.  
 
 #### MakeHub: Fully automated generation of UCSC assembly hubs ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+)
-This feature will create a track hub which you can host on a public file service allowing for byte-access. This can then be connected to the UCSC genome browser and viewed as a track (e.g.: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr12%3A116533435%2D116536513&hgsid=1282820889_LUJAMUR9DzBvxiKtV6M3Qhk7c0Iv). Please see the MakeHub documentation for more details: https://github.com/Gaius-Augustus/MakeHub#how-to-use-makehub-output-with-ucsc-genome-browser
+This feature will create a track hub which you can host on a public file service. This can then be connected to the UCSC genome browser and viewed as a track (e.g.: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr12%3A116533435%2D116536513&hgsid=1282820889_LUJAMUR9DzBvxiKtV6M3Qhk7c0Iv). Please see the MakeHub documentation for more details: https://github.com/Gaius-Augustus/MakeHub#how-to-use-makehub-output-with-ucsc-genome-browser
 
 #### MultiQC: Aggregate results from bioinformatics analyses across many samples into a single report ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 This tool will collect results from other quality control tools into a viewable report.
@@ -80,178 +78,15 @@ This tool will collect results from other quality control tools into a viewable 
 
 ### General Usage 
 
-The default mode to run ***bambu** is using a set of aligned reads (bam files), reference genome annotations (gtf file, TxDb object, or bambuAnnotation object), and reference genome sequence (fasta file or BSgenome). ***bambu*** will return a summarizedExperiment object with the genomic coordinates for annotated and new transcripts and transcript expression estimates.
+After setting the parameters as needed, you should hit "connect" in order to be provided a hardware allocation in Google Colaboratory. Save the set parameters into the runtime by hitting the arrow on the left side of each code bar. Thereafter, minimize the remaining sections by setting the arrow as shown below. You can then run the relevant analysis automatically by utilizing the arrow denoting the entire section. 
 
-We highly recommend to use the same annotations that were used for genome alignment. If you have a gtf file and fasta file you can run ***bambu*** with the following options:
-
-```rscript
-test.bam <- system.file("extdata", "SGNex_A549_directRNA_replicate5_run1_chr9_1_1000000.bam", package = "bambu")
-  
-fa.file <- system.file("extdata", "Homo_sapiens.GRCh38.dna_sm.primary_assembly_chr9_1_1000000.fa", package = "bambu")
-
-gtf.file <- system.file("extdata", "Homo_sapiens.GRCh38.91_chr9_1_1000000.gtf", package = "bambu")
-
-bambuAnnotations <- prepareAnnotations(gtf.file)
-
-se <- bambu(reads = test.bam, annotations = bambuAnnotations, genome = fa.file)
-
-```
-**Transcript discovery only (no quantification)**
-
-```rscript
-bambu(reads = test.bam, annotations = txdb, genome = fa.file, quant = FALSE)
-```
-
-**Quantification of annotated transcripts and genes only (no transcript/gene discovery)**
-
-```rscript
-bambu(reads = test.bam, annotations = txdb, genome = fa.file, discovery = FALSE)
-```
-
-**Large sample number/ limited memory**     
-For larger sample numbers we recommend to write the processed data to a file:
-
-```rscript
-bambu(reads = test.bam, rcOutDir = "./bambu/", annotations = bambuAnnotations, genome = fa.file)
-```
-
-For very large samples (>100 million reads) where memory is limiting we recommend running Bambu in lowMemory mode:
-
-```rscript
-bambu(reads = test.bam, annotations = bambuAnnotations, genome = fa.file, lowMemory = TRUE)
-```
-
----
-
-
-### Use precalculated annotation objects
-
-You can also use precalculated annotations.
-
-If you plan to run ***bambu*** more frequently, we recommend to save the bambuAnnotations object.
-
-The bambuAnnotation object can be calculated from a *.gtf* file:
-
-```rscript
-annotations <- prepareAnnotation(gtf.file)
-```
-
-From *TxDb* object
-
-```rscript
-annotations <- prepareAnnotations(txdb)
-```
-
----
-
-### Advanced Options
-
-**More stringent filtering thresholds imposed on potential novel transcripts**    
- 
-- Keep novel transcripts with min 5 read count in at least 1 sample: 
-
-```rscript
-bambu(reads, annotations, genome, opt.discovery = list(min.readCount = 5))
-```
-
-- Keep novel transcripts with min 5 samples having at least 2 counts:
-
-```rscript
-bambu(reads, annotations, genome, opt.discovery = list(min.sampleNumber = 5))
-```
-
-- Filter out transcripts with relative abundance within gene lower than 10%: 
-
-```rscript
-bambu(reads, annotations, genome, opt.discovery = list(min.readFractionByGene = 0.1))
-```
-
-- Set novel transcript discovery rate to 50% of the detected transcripts (lower is more): 
-
-```rscript
-bambu(reads, annotations, genome, NDR = 0.5)
-```
-
-**Quantification without bias correction**     
-
- The default estimation automatically does bias correction for expression estimates. However, you can choose to perform the quantification without bias correction.
-
-```rscript
-bambu(reads, annotations, genome, opt.em = list(bias = FALSE))
-```
-
-**Parallel computation**      
- ***bambu***  allows parallel computation.  
-
-```rscript
-bambu(reads, annotations, genome, ncore = 8)
-```
-
-See [our page](https://goekelab.github.io/bambu/) for a complete step-by-step workflow and manual on how to customize other condictions.
+![screenshot of the runtime view](https://u.cubeupload.com/MakeTheBrainHappy/ScreenShot20220214at.png)
 
 ---
 
 ### Details on the output 
 
-***bambu*** will output different results depending on whether *quant* mode is on. 
-
-By default, *quant* is set to TRUE, 
-so ***bambu*** will generate a *SummarizedExperiment* object that contains the transcript expression estimates.  
-
-* access transcript expression estimates by ***counts()***, including a list of variables: counts, CPM, fullLengthCount, partialLengthCounts, and uniqueCounts, and theta
-    + counts: expression estimates
-    + CPM: sequencing depth normalized estimates
-    + fullLengthCounts: estimates of read counts mapped as full length reads for each transcript
-    + partialLengthCounts: estimates of read counts mapped as partial length reads for each transcript
-    + uniqueCounts: counts of reads that are uniquely mapped to each transcript
-    + theta: raw estimates
-* access annotations that are matched to the transcript expression estimates by ***rowRanges()***
-* access transcript to gene id map by ***rowData()***, *eqClass* that defines the equivalent class transcripts is also reported
-
-In the case when *quant* is set to FALSE, i.e., only transcript discovery is performed, 
-***bambu*** will report the *grangeslist* of the extended annotations
-
-### Complementary functions
-
-**Transcript expression to gene expression**
-
-```rscript
-transcriptToGeneExpression(se)
-```
-
-**Visualization**
-
- You can visualize the novel genes/transcripts using ***plotBambu*** function 
-
-```rscript
-plotBambu(se, type = "annotation", gene_id)
-
-plotBambu(se, type = "annotation", transcript_id)
-```
-
-- ***plotBambu*** can also be used to visualize the clustering of input samples on gene/transcript expressions
-
-```rscript
-plotBambu(se, type = "heatmap") # heatmap 
-
-plotBambu(se, type = "pca") # PCA visualization
-```
-
-- ***plotBambu*** can also be used to visualize the clustering of input samples on gene/transcript expressions with grouping variable
-
-```rscript
-plotBambu(se, type = "heatmap", group.var) # heatmap 
-
-plotBambu(se, type = "pca", group.var) # PCA visualization
-```
-
-**Write bambu outputs to files**
-
-- ***writeBambuOutput*** will generate three files, including a *.gtf* file for the extended annotations, and two *.txt* files for the expression counts at transcript and gene levels.
-
-```rscript
-writeBambuOutput(se, path = "./bambu/")
-```
+The pipeline will save all outputs to the relevant folders, whose names match the name of the program from which the files originate from. 
 
 ---
 
