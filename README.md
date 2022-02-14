@@ -29,10 +29,10 @@ Once this is complete you can open the file ```long_read_rna_seq_analysis_prebui
 
 ### Features
 
-Links to documentation for each software package can be found in the notebook file. The features are colored by importance: red are critical for successful generation of aligned files, blue are optional but additive, while green denotes programs suitable for advanced users. 
+Links to documentation for each software package can be found in the notebook file. The features are colored by importance: red programs are critical for successful generation of aligned files, blue are optional but additive, while green denotes software suitable for advanced users. 
 
 #### Parameter Input and User Instructions ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
-
+This section allows you to setup and automate the remainder of the analysis. Most parameters are necessary for specific programs, but four specific variables: ```PIPELINE_FILE_PATH```, ```ACC```, ```INDEX_FILE_PATH``` and ```ANNOTATION_FILE_PATH``` are critical. Please note that ```PARTITIONED_INDEX_FILE_PATH``` takes the place of ```INDEX_FILE_PATH``` if you are using minimap2 featherweight alignment (described below). The pipeline file path describes where in your Google Drive file system or local file system the pipeline is set up. The ACC variable specifies either the FASTQ file on your machine containing long-read sequencing data or the run accession number (e.g. [SRR12389274](https://www.ebi.ac.uk/ena/browser/view/SRR12389274)) for the publically available file which you wish to analyze. You can search for samples relevant to your field of interest with the European Nucleotide Archive's Advanced Search Feature: https://www.ebi.ac.uk/ena/browser/advanced-search (tutorial: https://www.youtube.com/watch?v=ugLaYRgh1pE). The index file path describes where the reference genome exists within your file system; the annotation file path describes where the reference annotation exists in the same file system. 
 
 #### Mounting your Google Drive ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 
@@ -40,7 +40,7 @@ Links to documentation for each software package can be found in the notebook fi
 #### Managing Software via BioConda ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 
 
-#### Kingfisher: fast and flexible program for procurement of sequence files ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
+#### Kingfisher: fast and flexible program for procurement of sequence files ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 
 
 #### FastQC: A quality control tool for high throughput sequence data ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
@@ -255,4 +255,4 @@ to be added.
 
 ### Contributors
 
-This pipeline was developed by [Theodore Nelson](https://github.com/Theo-Nelson) at Columbia University Irving Medical Center. 
+This pipeline was developed by [Theodore Nelson](https://github.com/Theo-Nelson) at the Columbia University Irving Medical Center. 
