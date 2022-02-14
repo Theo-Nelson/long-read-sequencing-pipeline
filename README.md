@@ -35,15 +35,16 @@ Links to documentation for each software package can be found in the notebook fi
 This section allows you to setup and automate the remainder of the analysis. Most parameters are necessary for specific programs, but four specific variables: ```PIPELINE_FILE_PATH```, ```ACC```, ```INDEX_FILE_PATH``` and ```ANNOTATION_FILE_PATH``` are critical. Please note that ```PARTITIONED_INDEX_FILE_PATH``` takes the place of ```INDEX_FILE_PATH``` if you are using minimap2 featherweight alignment (described below). The pipeline file path describes where in your Google Drive file system or local file system the pipeline is set up. The ACC variable specifies either the FASTQ file on your machine containing long-read sequencing data or the run accession number (e.g. [SRR12389274](https://www.ebi.ac.uk/ena/browser/view/SRR12389274)) for the publically available file which you wish to analyze. You can search for samples relevant to your field of interest with the European Nucleotide Archive's Advanced Search Feature: https://www.ebi.ac.uk/ena/browser/advanced-search (tutorial: https://www.youtube.com/watch?v=ugLaYRgh1pE). The index file path describes where the reference genome exists within your file system; the annotation file path describes where the reference annotation exists in the same file system. 
 
 #### Mounting your Google Drive ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
-
+This will connect your current hardware instance to your Google Drive and allow you to permeantly store your analysis. Most academic users enjoy unlimited Google Drive Storage space, while basic users are given 30 GB of free storage space.
 
 #### Managing Software via BioConda ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
-
+BioConda is a centralized package manager necessary to install the remaining programs. 
 
 #### Kingfisher: fast and flexible program for procurement of sequence files ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
-
+This program will download sequence files from the European Nucleotide Archive. 
 
 #### FastQC: A quality control tool for high throughput sequence data ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
+This tool will generate basic high-level statistics regarding read length and sequencing quality. Long-read sequences generally have poor basepair quality. 
 
 #### minimap2: A versatile pairwise aligner for genomic and spliced nucleotide sequences (Google Colab Pro required) ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 
@@ -52,21 +53,28 @@ This section allows you to setup and automate the remainder of the analysis. Mos
 
 
 #### samtools: Reading/writing/editing/indexing/viewing SAM/BAM/CRAM format ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
-
+This tool 
 
 #### TranscriptClean: correct mismatches, microindels, and noncanonical splice junctions ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 
+
 #### featureCounts: an efficient general purpose program for assigning sequence reads to genomic features ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
+This tool will produce a count matrix assigning reads to features within your reference annotation. 
 
 #### TAMA: Transcriptome Annotation by Modular Algorithms (Google Colab Pro required) ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
+This memory-intensive program will produce a reference transcriptome (GTF file) based on your long-read sequencing data. 
 
 #### svist4get: a simple visualization tool for genomic tracks from sequencing experiments ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
+This tool will generate a graph of read coverage (i.e. how many reads align to a given region) for a specific chromosomal region (the names for these must match the names of chromosome within your reference genome/annotation). 
 
 #### AlignQC: Long read alignment analysis ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
+This time-intensive tool will generate statistics regarding the aligned long-read sequences, including the number of novel transcripts within your sample.  
 
 #### MakeHub: Fully automated generation of UCSC assembly hubs ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+)
+This feature will create a track hub which you can host on a public file service allowing for byte-access. This can then be connected to the UCSC genome browser and viewed as a track (e.g.: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr12%3A116533435%2D116536513&hgsid=1282820889_LUJAMUR9DzBvxiKtV6M3Qhk7c0Iv). Please see the MakeHub documentation for more details: https://github.com/Gaius-Augustus/MakeHub#how-to-use-makehub-output-with-ucsc-genome-browser
 
 #### MultiQC: Aggregate results from bioinformatics analyses across many samples into a single report ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
+This tool will collect results from other quality control tools into a viewable report.
 
 ---
 
