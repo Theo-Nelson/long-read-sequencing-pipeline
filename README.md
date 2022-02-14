@@ -47,11 +47,10 @@ This program will download sequence files from the European Nucleotide Archive.
 This tool will generate basic high-level statistics regarding read length and sequencing quality. Long-read sequences generally have poor basepair quality. 
 
 #### minimap2: A versatile pairwise aligner for genomic and spliced nucleotide sequences (Google Colab Pro required) ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
-Alignment will occur either with minimap2 (available in Google Colab Pro due to memory constraints) or minimap2 featherweight alignment (available in the free version of Google Colab). 
+Alignment will occur either with minimap2 (available in Google Colab Pro due to memory constraints) or minimap2 featherweight alignment (available in the free version of Google Colab). minimap2 is a versatile aligner which maps reads onto a reference genome. 
 
 #### minimap2 featherweight alignment ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
-Alignment will occur either with minimap2 (available in Google Colab Pro due to memory constraints) or minimap2 featherweight alignment (available in the free version of Google Colab). 
-
+Alignment will occur either with minimap2 (available in Google Colab Pro due to memory constraints) or minimap2 featherweight alignment (available in the free version of Google Colab). minimap2 is a versatile aligner which maps reads onto a reference genome. The featherweight version saves memory by splitting the reference genome into four parts, aligning to each of these in turn and thereafter merging the results. 
 
 #### samtools: Reading/writing/editing/indexing/viewing SAM/BAM/CRAM format ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 This tool stores your aligned reads in a compressed binary format, sorting and indexing them along the way for quick access by chromosomal location. These files could be downloaded and viewed in a program such as the Integrated Genomics Viewer available from the Broad Institute (https://software.broadinstitute.org/software/igv/). 
