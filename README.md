@@ -1,6 +1,6 @@
-# A Long Read Sequencing Pipeline in the Cloud  
+# Long Read Sequencing Analysis in the Cloud  
 
-A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and PacBio Sequencers. This pipeline was originally implemented and has been extensively tested in Google Colaboratory.
+A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and PacBio Sequencers. This pipeline was originally implemented and tested in Google Colaboratory.
 
 ---
 
