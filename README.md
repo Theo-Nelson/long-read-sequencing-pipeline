@@ -40,7 +40,7 @@ Links to documentation for each software package can be found in the notebook fi
 #### Managing Software via BioConda ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 
 
-#### Kingfisher: fast and flexible program for procurement of sequence files ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
+#### Kingfisher: fast and flexible program for procurement of sequence files ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 
 
 #### FastQC: A quality control tool for high throughput sequence data ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
