@@ -47,16 +47,17 @@ This program will download sequence files from the European Nucleotide Archive.
 This tool will generate basic high-level statistics regarding read length and sequencing quality. Long-read sequences generally have poor basepair quality. 
 
 #### minimap2: A versatile pairwise aligner for genomic and spliced nucleotide sequences (Google Colab Pro required) ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
-
+Alignment will occur either with minimap2 (available in Google Colab Pro due to memory constraints) or minimap2 featherweight alignment (available in the free version of Google Colab). 
 
 #### minimap2 featherweight alignment ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
+Alignment will occur either with minimap2 (available in Google Colab Pro due to memory constraints) or minimap2 featherweight alignment (available in the free version of Google Colab). 
 
 
 #### samtools: Reading/writing/editing/indexing/viewing SAM/BAM/CRAM format ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
-This tool 
+This tool stores your aligned reads in a compressed binary format, sorting and indexing them along the way for quick access by chromosomal location. These files could be downloaded and viewed in a program such as the Integrated Genomics Viewer available from the Broad Institute (https://software.broadinstitute.org/software/igv/). 
 
 #### TranscriptClean: correct mismatches, microindels, and noncanonical splice junctions ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
-
+This feature will try to polish your reads to adhere to known biological principles and decrease variability among reads aligning to the same region.  
 
 #### featureCounts: an efficient general purpose program for assigning sequence reads to genomic features ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 This tool will produce a count matrix assigning reads to features within your reference annotation. 
