@@ -101,4 +101,4 @@ to be added.
 
 ### Contributors
 
-*[Theodore Nelson](https://github.com/Theo-Nelson), Columbia University Irving Medical Center 
+* [Theodore Nelson](https://github.com/Theo-Nelson), Columbia University Irving Medical Center 
