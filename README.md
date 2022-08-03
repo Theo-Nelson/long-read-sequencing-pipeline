@@ -1,6 +1,6 @@
-# Long Read Sequencing Analysis in the Cloud  
+# L-RAP: A Cloud Computing Pipeline for the Analysis of Collected or Publicly Available Long-Read Sequencing Data   
 
-A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and PacBio Sequencers. This pipeline was originally implemented and tested in Google Colaboratory.
+A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and PacBio Sequencers, originally implemented and tested in Google Colaboratory.
 
 ---
 
