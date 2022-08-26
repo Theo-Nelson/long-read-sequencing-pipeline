@@ -36,7 +36,7 @@ The pipeline can be installed on a local machine with the following command (req
 github clone https://github.com/Theo-Nelson/long-read-sequencing-pipeline
 ```
 
-Please note that the installation scripts have not been tested outside of the Google Colaboratory environment, which is generally set up in the following manner, according to ```cat /etc/os-release```. 
+Please note that the installation scripts within the pipeline have not been tested outside of the Google Colaboratory environment, which is generally set up in the following manner, according to ```cat /etc/os-release```. 
 ```
 NAME="Ubuntu"
 VERSION="18.04.6 LTS (Bionic Beaver)"
