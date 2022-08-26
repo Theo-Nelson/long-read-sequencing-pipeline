@@ -10,6 +10,7 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
   - [Features](#features)
   - [General Usage](#general-usage)
   - [Details on the output](#details-on-the-output)
+  - [Troubleshooting Guide](#troubleshooting-guide)
   - [Citation](#citation)
   - [Contributors](#contributors)
 
@@ -17,14 +18,44 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
 
 ### Installation
 
-It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing (requires a Google Account). The pipeline can be installed on a local machine with the following command (requires Git: https://github.com/git-guides/install-git). Users are expected to provide their own reference genomes on their local machine. Ensembl reference annotations for a large number of species can be accessed at the following address: http://ftp.ensembl.org/pub/
+#### Google Colaboratory 
+
+
+#### Reference Annotations
+
+Users are expected to provide their own reference genomes on their local machine. Ensembl reference annotations for a large number of species can be accessed at the following address: http://ftp.ensembl.org/pub/
+
+#### For Users with Unlimited Google Drive Storage
+
+It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing. Once installation is complete, users should open ```long_read_rna_seq_analysis_prebuilt_indices.ipynb``` to begin working with the pipeline. For first-time users Colaboratory can be installed as follows in Google Drive:  ```NEW``` => ```MORE``` => ```+ Connect more apps``` => Search ```Colaboratory```. Please make sure that the ```$PIPELINE_FILE_PATH``` variable matches between your installation and pipeline script. By default, this is set to ```/content/drive/MyDrive```.
+
+#### Local Installations
+
+The pipeline can be installed on a local machine with the following command (requires Git: https://github.com/git-guides/install-git).
 ```bash
 github clone https://github.com/Theo-Nelson/long-read-sequencing-pipeline
 ```
 
-Two of the programs within this pipeline require more than 12 GB of memory. [Google Colab Pro](https://colab.research.google.com/signup), a service which costs $10/month, provides up to 25 GB of RAM. There are alternative programs that perform the same functions for users working with free version of Google Colaboratory.  
+Please note that the installation scripts within the pipeline have not been tested outside of the Google Colaboratory environment, which is generally set up in the following manner, according to ```cat /etc/os-release```. 
+```
+NAME="Ubuntu"
+VERSION="18.04.6 LTS (Bionic Beaver)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 18.04.6 LTS"
+VERSION_ID="18.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=bionic
+UBUNTU_CODENAME=bionic
+```
+#### Optional Upgrades
 
-Once installation is complete, users should open ```long_read_rna_seq_analysis_prebuilt_indices.ipynb``` to begin working with the pipeline. For first-time users Colaboratory can be installed as follows in Google Drive:  ```NEW``` => ```MORE``` => ```+ Connect more apps``` => Search ```Colaboratory```
+No pipeline program requires these optional upgrades, which allow for speedier runtimes and increased cloud storage:
+- [Google Colab Pro](https://colab.research.google.com/signup), a service which costs $10/month, provides up to 25 GB of RAM. Once purchased, this feature can be activated by selecting ```Runtime``` from the top menu => ```Change Runtime Type``` => ```Runtime shape``` => ```High RAM```.
+- [Google One](https://one.google.com/u/2/storage), a service which costs $2.99/month for 200 GB of storage. Once purchased, this feature will be automatically applied. Please note that users with unlimited storage through academic or workspace accounts do not require this service. 
 
 ---
 
@@ -90,6 +121,12 @@ After setting the parameters as needed, you should hit "connect" in order to be 
 ### Details on the output 
 
 The pipeline will save all outputs to the relevant folders. 
+
+---
+
+### Troubleshooting Guide
+
+to be added.
 
 ---
 
