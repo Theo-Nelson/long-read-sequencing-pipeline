@@ -17,14 +17,30 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
 
 ### Installation
 
-It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing (requires a Google Account). The pipeline can be installed on a local machine with the following command (requires Git: https://github.com/git-guides/install-git). Users are expected to provide their own reference genomes on their local machine. Ensembl reference annotations for a large number of species can be accessed at the following address: http://ftp.ensembl.org/pub/
+#### Google Colaboratory 
+
+Once installation is complete, users should open ```long_read_rna_seq_analysis_prebuilt_indices.ipynb``` to begin working with the pipeline. For first-time users Colaboratory can be installed as follows in Google Drive:  ```NEW``` => ```MORE``` => ```+ Connect more apps``` => Search ```Colaboratory```
+
+#### Reference Annotations
+
+Users are expected to provide their own reference genomes on their local machine. Ensembl reference annotations for a large number of species can be accessed at the following address: http://ftp.ensembl.org/pub/
+
+#### For Users with Unlimited Google Drive Storage
+
+It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing (requires a Google Account). 
+
+#### Local Installations
+
+The pipeline can be installed on a local machine with the following command (requires Git: https://github.com/git-guides/install-git). 
 ```bash
 github clone https://github.com/Theo-Nelson/long-read-sequencing-pipeline
 ```
 
-Two of the programs within this pipeline require more than 12 GB of memory. [Google Colab Pro](https://colab.research.google.com/signup), a service which costs $10/month, provides up to 25 GB of RAM. There are alternative programs that perform the same functions for users working with free version of Google Colaboratory.  
+#### Optional Upgrades
 
-Once installation is complete, users should open ```long_read_rna_seq_analysis_prebuilt_indices.ipynb``` to begin working with the pipeline. For first-time users Colaboratory can be installed as follows in Google Drive:  ```NEW``` => ```MORE``` => ```+ Connect more apps``` => Search ```Colaboratory```
+No pipeline program requires these optional upgrades; however, users interested in speedier runtimes and larger cloud storage may benefit:
+- [Google Colab Pro](https://colab.research.google.com/signup), a service which costs $10/month, provides up to 25 GB of RAM. Once purchased, this feature can be activated by selecting ```Runtime``` from the top menu => ```Change Runtime Type``` => ```Runtime shape``` => ```High RAM```.
+- [Google One](https://one.google.com/u/2/storage), which allows you to increase the amount of storage space within your Google Drive. The standard 200 GB plan costs $2.99/month. Note: Users with unlimited storage through academic or workspace accounts do not require this service. 
 
 ---
 
