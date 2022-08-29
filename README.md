@@ -20,14 +20,15 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
 
 #### Google Colaboratory 
 
+Open the following notebook (requires a Google Account): https://drive.google.com/file/d/1OORV8X1Qe3RP7u-bIaJh0PCsEF7Y_imJ/view?usp=sharing (that's it!)
 
-#### Reference Annotations
+#### Reference Genomes and Annotations
 
-Users are expected to provide their own reference genomes on their local machine. Ensembl reference annotations for a large number of species can be accessed at the following address: http://ftp.ensembl.org/pub/
+Within Google Colaboratory, reference genomes and annotations can be downloaded for hg38 (human) and mm39 (mouse) from UCSC. For additional species, users should input their own download links. Users are expected to provide their own reference genomes if running the pipeline on their local machine. Ensembl reference annotations for a large number of species can be accessed at the following address: http://ftp.ensembl.org/pub/
 
 #### For Users with Unlimited Google Drive Storage
 
-It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing. Once installation is complete, users should open ```long_read_rna_seq_analysis_prebuilt_indices.ipynb``` to begin working with the pipeline. For first-time users Colaboratory can be installed as follows in Google Drive:  ```NEW``` => ```MORE``` => ```+ Connect more apps``` => Search ```Colaboratory```. Please make sure that the ```$PIPELINE_FILE_PATH``` variable matches between your installation and pipeline script. By default, this is set to ```/content/drive/MyDrive```.
+It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing. Once installation is complete, users should open ```long_read_rna_seq_analysis.ipynb``` to begin working with the pipeline. For first-time users Colaboratory can be installed as follows in Google Drive:  ```NEW``` => ```MORE``` => ```+ Connect more apps``` => Search ```Colaboratory```. Please make sure that the ```$PIPELINE_FILE_PATH``` variable matches between your installation and pipeline script. By default, this is set to ```/content/drive/MyDrive```.
 
 #### Local Installations
 
