@@ -1,4 +1,4 @@
-# L-RAP: A Cloud-Computing Pipeline for the Analysis of Long-Read RNA Sequencing Data    
+# L-RAPiT: Long Read Analysis Pipeline for Transcriptomics  
 
 A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and PacBio Sequencers, originally implemented and tested in Google Colaboratory.
 
