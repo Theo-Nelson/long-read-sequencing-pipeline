@@ -56,7 +56,7 @@ UBUNTU_CODENAME=bionic
 
 No pipeline program requires these optional upgrades, which allow for speedier runtimes and increased cloud storage:
 - [Google Colab Pro](https://colab.research.google.com/signup), a service which costs $10/month, provides up to 25 GB of RAM. Once purchased, this feature can be activated by selecting ```Runtime``` from the top menu => ```Change Runtime Type``` => ```Runtime shape``` => ```High RAM```.
-- [Google One](https://one.google.com/u/2/storage), a service which costs $2.99/month for 200 GB of storage. Once purchased, this feature will be automatically applied. Please note that users with unlimited storage through academic or workspace accounts do not require this service. Once purchased, please see the section above entitled, ```For Users with Unlimited Google Drive Storage```.
+- [Google One](https://one.google.com/u/2/storage), a service which costs $2.99/month for 200 GB of drive storage. Once purchased, this feature will be automatically applied. Please note that users with unlimited storage through academic or workspace accounts do not require this service. Once purchased, please see the section above entitled, ```For Users with Unlimited Google Drive Storage```.
 
 ---
 
