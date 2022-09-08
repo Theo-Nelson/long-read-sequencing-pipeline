@@ -1,4 +1,4 @@
-# L-RAP: A Cloud-Computing Pipeline for the Analysis of Long-Read RNA Sequencing Data    
+# L-RAPiT: Long Read Analysis Pipeline for Transcriptomics  
 
 A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and PacBio Sequencers, originally implemented and tested in Google Colaboratory.
 
@@ -62,51 +62,57 @@ No pipeline program requires these optional upgrades, which allow for speedier r
 
 ### Features
 
-Links to the official documentation for each software package can be found in ```long_read_rna_seq_analysis.ipynb```. Here, we describe the general function of the programs and color them by importance: red programs (![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png)) are critical for successful generation of aligned reads, pink programs (![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)) are optional in this process but additive in contextualizing your long-read sample, and blue programs (![#1589F0](https://github.com/Theo-Nelson/squares/blob/main/blue_square.png)) are recommended for users with external web-hosting resources. 
+Links to the official documentation for each software package can be found in ```long_read_rna_seq_analysis.ipynb```. Here, we describe the general function of the programs and color them by importance: red programs (![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png)) are critical for successful generation of aligned reads, pink programs (![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)) are optional in this process but additive in contextualizing your long-read sample, and blue programs (![#1589F0](https://github.com/Theo-Nelson/squares/blob/main/blue_square.png)) are recommended for users with external web-hosting resources. Additionally, programs are rated based on speed, with options being "Super Quick", "Quick" and "Grab a Coffee ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/SMirC-coffeebreak.svg.png)". The approximate timing should be less than 1 min, less than 10 minutes and greater than 10 minutes, respectively. As you increase the number of reads you analyze, the time will increase proportionally for many of the programs listed. A key exception is the installation script, which should consistently take betweeen 12 and 15 minutes of runtime.  
 
-#### Parameter Input and User Instructions ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png)
-This section allows you to setup and automate the remainder of the analysis by providing key pieces of information. Most parameters are necessary for specific programs, but four variables in particular are more widely applicable: ```PIPELINE_FILE_PATH```, ```ACC```, ```INDEX_FILE_PATH``` and ```ANNOTATION_FILE_PATH```. Please note that ```PARTITIONED_INDEX_FILE_PATH``` is necessary if you are using minimap2 featherweight alignment which is described below. The pipeline file path describes where in your Google Drive file system or local file system the pipeline is set up. The ACC variable specifies either the FASTQ file on your machine containing long-read sequencing data or the run accession number (e.g. [SRR12389274](https://www.ebi.ac.uk/ena/browser/view/SRR12389274)) for the publically available file which you wish to analyze. You can search for samples relevant to your field of interest with the European Nucleotide Archive's Advanced Search Feature: https://www.ebi.ac.uk/ena/browser/advanced-search (tutorial: https://www.youtube.com/watch?v=ugLaYRgh1pE). The index file path describes where the reference genome exists within your file system; the annotation file path describes where the reference annotation exists in the same file system. 
+#### Parameter Input and User Instructions ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png) (Super Quick)
+This section allows you to setup and automate the remainder of the analysis by providing key pieces of information. Most parameters are necessary for specific programs, but four variables in particular are more widely applicable: ```PIPELINE_FILE_PATH```, ```ACC```, ```INDEX_FILE_PATH``` and ```ANNOTATION_FILE_PATH```. The pipeline file path describes where in your Google Drive file system or local file system the pipeline is set up. The ACC variable specifies either the FASTQ file on your machine containing long-read sequencing data or the run accession number (e.g. [SRR12389274](https://www.ebi.ac.uk/ena/browser/view/SRR12389274)) for the publically available file which you wish to analyze. You can search for samples relevant to your field of interest with the European Nucleotide Archive's Advanced Search Feature: https://www.ebi.ac.uk/ena/browser/advanced-search (tutorial: https://www.youtube.com/watch?v=ugLaYRgh1pE). The index file path describes where the reference genome exists within your file system; the annotation file path describes where the reference annotation exists in the same file system. 
 
-#### Mounting your Google Drive ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png)
-This will connect your current hardware instance to your Google Drive and allow you to permeantly store your analysis. Most academic users enjoy unlimited Google Drive Storage space, while basic users are given 30 GB of free storage space.
+#### Mounting your Google Drive ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png) (Super Quick)
+This will connect your current hardware instance to your Google Drive and allow you to permanently store your analysis. Most academic users enjoy unlimited Google Drive Storage space, while basic users are given 15 GB of free storage space. Additionally, you can export the necessary variables to download results to your local hard drive. When exporting either a fastq, sam or bam file, you will need to export each individual sample separately. For all other exports, you can download the results from all samples analyzed at the same time. 
 
-#### Managing Software via BioConda ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png)
-BioConda is a centralized package manager necessary to install the remaining programs. 
+#### Managing Software via BioConda ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png) (Grab a Coffee ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/SMirC-coffeebreak.svg.png))
+BioConda is a centralized package manager necessary to install the remaining programs. We recommend installing all the programs before proceeding.  
 
-#### Kingfisher: fast and flexible program for procurement of sequence files ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)
+#### Kingfisher: fast and flexible program for procurement of sequence files ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Quick)
 This program will download sequence files from the European Nucleotide Archive. 
 
-#### FastQC: A quality control tool for high throughput sequence data ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)
+#### FastQC: A quality control tool for high throughput sequence data ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Quick)
 This tool will generate basic high-level statistics regarding read length and sequence quality. Long-read sequences generally have poor base-pair level quality. 
 
-#### minimap2: A versatile pairwise aligner for genomic and spliced nucleotide sequences (Google Colab Pro required) ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png)
-Alignment will occur either with minimap2 (available in Google Colab Pro due to memory constraints) or minimap2 featherweight alignment (available in the free version of Google Colab). minimap2 is a versatile aligner which maps reads onto a reference genome. This pipeline utilizes program options suitable for alignment of reads from cDNA libraries or RNA. Please consult the minimap2 documentation (https://github.com/lh3/minimap2) to find options relating to your specific application.  
+#### minimap2: A versatile pairwise aligner for genomic and spliced nucleotide sequences ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png) (Grab a Coffee ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/SMirC-coffeebreak.svg.png))
+minimap2 is a versatile aligner which maps reads, both spliced and unspliced, onto a reference genome. This pipeline utilizes program options suitable for alignment of reads from cDNA libraries or direct RNA.
 
-#### minimap2 featherweight alignment ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png)
-Alignment will occur either with minimap2 (available in Google Colab Pro due to memory constraints) or minimap2 featherweight alignment (available in the free version of Google Colab). minimap2 is a versatile aligner which maps reads onto a reference genome. The featherweight version saves memory by splitting the reference genome into four parts, aligning to each of these in turn and thereafter merging the results. 
-
-#### samtools: Reading/writing/editing/indexing/viewing SAM/BAM/CRAM format ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png)
+#### samtools: Reading/writing/editing/indexing/viewing SAM/BAM/CRAM format ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png) (Super Quick)
 This tool stores your aligned reads in a compressed binary format, sorting and indexing them along the way for quick access by chromosomal location. These files can be downloaded and viewed in a program such as the Integrated Genomics Viewer available from the Broad Institute (https://software.broadinstitute.org/software/igv/). 
 
-#### TranscriptClean: correct mismatches, microindels, and noncanonical splice junctions ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)
+#### TranscriptClean: correct mismatches, microindels, and noncanonical splice junctions ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Grab a Coffee ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/SMirC-coffeebreak.svg.png))
 This feature will try to polish your reads to adhere to known biological principles and decrease variability among reads aligning to the same region.  
 
-#### featureCounts: an efficient general purpose program for assigning sequence reads to genomic features ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)
+#### FLAME: gene-specific long-read splice variant annotation ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Quick)
+This program will try to detect novel splice junctions and exons within a pre-defined gene locus. 
+
+#### featureCounts: an efficient general purpose program for assigning sequence reads to genomic features ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Super Quick)
 This tool will produce a count matrix assigning reads to features within your reference annotation. 
 
-#### TAMA: Transcriptome Annotation by Modular Algorithms (Google Colab Pro required) ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)
-This memory-intensive program will produce a reference transcriptome (GTF file) based on your long-read sequencing data. 
+#### FusionSeeker: detect gene fusions ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Quick)
+This program will try to detect high confidence gene fusions within the long-read data. 
 
-#### svist4get: a simple visualization tool for genomic tracks from sequencing experiments ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)
+#### StringTie: transcript assembly ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Super Quick)
+This program will produce a novel transcriptome annotation based on your long-read data.  
+
+#### GffCompare: transcript assembly statistics ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Super Quick)
+This program will compare the novel transcriptome generated by StringTie with the reference transcriptome. 
+
+#### svist4get: a simple visualization tool for genomic tracks from sequencing experiments ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Quick)
 This tool will generate a graph of read coverage (i.e. how many reads align to a given region) for a specific chromosomal region (the names for these must match the names of chromosome within your reference genome/annotation). 
 
-#### Pistis: Quality control plotting for long reads ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)
+#### Pistis: Quality control plotting for long reads ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Grab a Coffee ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/SMirC-coffeebreak.svg.png))
 This quality control package will provide information regarding read quality, gc content and read alignment. 
 
-#### MakeHub: Fully automated generation of UCSC assembly hubs ![#1589F0](https://github.com/Theo-Nelson/squares/blob/main/blue_square.png)
+#### MakeHub: Fully automated generation of UCSC assembly hubs ![#1589F0](https://github.com/Theo-Nelson/squares/blob/main/blue_square.png) (Grab a Coffee ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/SMirC-coffeebreak.svg.png))
 This feature will create a track hub which you can host on a public file service. This can then be connected to the UCSC genome browser and viewed as a track (e.g.: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr12%3A116533435%2D116536513&hgsid=1282820889_LUJAMUR9DzBvxiKtV6M3Qhk7c0Iv). Please see the MakeHub documentation for more details: https://github.com/Gaius-Augustus/MakeHub#how-to-use-makehub-output-with-ucsc-genome-browser.
 
-#### MultiQC: Aggregate results from bioinformatics analyses across many samples into a single report ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png)
+#### MultiQC: Aggregate results from bioinformatics analyses across many samples into a single report ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Quick)
 This tool will summarize results from other quality control tools into a one-page report.
 
 ---
