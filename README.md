@@ -79,6 +79,9 @@ This program will download sequence files from the European Nucleotide Archive.
 #### FastQC: A quality control tool for high throughput sequence data ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Quick)
 This tool will generate basic high-level statistics regarding read length and sequence quality. Long-read sequences generally have poor base-pair level quality. 
 
+#### Shark: Gene-Specific Read Filtering ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Grab a Coffee ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/SMirC-coffeebreak.svg.png))
+This tool will filter reads related to a particular locus within your fasta file. 
+
 #### minimap2: A versatile pairwise aligner for genomic and spliced nucleotide sequences ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/red_square.png) (Grab a Coffee ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/SMirC-coffeebreak.svg.png))
 minimap2 is a versatile aligner which maps reads, both spliced and unspliced, onto a reference genome. This pipeline utilizes program options suitable for alignment of reads from cDNA libraries or direct RNA.
 
