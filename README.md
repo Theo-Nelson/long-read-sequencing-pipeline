@@ -97,6 +97,9 @@ This program will try to detect novel splice junctions and exons within a pre-de
 #### featureCounts: an efficient general purpose program for assigning sequence reads to genomic features ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Super Quick)
 This tool will produce a count matrix assigning reads to features within your reference annotation. 
 
+#### LIQA: transcript quantification ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Grab a Coffee ![#f03c15](https://github.com/Theo-Nelson/squares/blob/main/SMirC-coffeebreak.svg.png))
+This tool will produce a count matrix assigning reads to transcripts within your reference annotation. 
+
 #### FusionSeeker: detect gene fusions ![#c5f015](https://github.com/Theo-Nelson/squares/blob/main/pink_square.png) (Quick)
 This program will try to detect high confidence gene fusions within the long-read data. 
 
