@@ -20,7 +20,7 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
 
 #### Google Colaboratory 
 
-Open the following notebook (requires a Google Account): https://colab.research.google.com/drive/1OORV8X1Qe3RP7u-bIaJh0PCsEF7Y_imJ (that's it!)
+Open the following notebook (requires a Google Account): https://colab.research.google.com/drive/1wRe5W1jfjZaJfG7YfsvprLPnm0Wbwn2q (that's it!)
 
 #### Reference Genomes and Annotations
 
