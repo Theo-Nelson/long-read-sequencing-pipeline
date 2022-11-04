@@ -133,7 +133,9 @@ After setting the parameters as needed, you should hit "connect" in order to be 
 
 ### Details on the output 
 
-The pipeline will save all outputs to the relevant folders. 
+The pipeline will save all outputs to the relevant folders. If the default file path is selected, then the output can be accessed via the Colab graphical user interface by clicking on the fourth row-bar on the left-menu. The output is located within the file system in the ``/content/`` folder. 
+
+![screenshot demonstrating output](https://u.cubeupload.com/MakeTheBrainHappy/ScreenShot20221103at.png)
 
 ---
 
