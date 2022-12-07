@@ -62,7 +62,7 @@ No pipeline program requires these optional upgrades, which allow for speedier r
 ---
 
 ### Pipeline Flowchart 
-![pipeline flowchart](./flowchart.svg)
+![pipeline flowchart](./flowchart_updated.svg)
 
 ---
 
