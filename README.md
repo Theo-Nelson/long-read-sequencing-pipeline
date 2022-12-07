@@ -62,7 +62,7 @@ No pipeline program requires these optional upgrades, which allow for speedier r
 ---
 
 ### Pipeline Flowchart 
-![pipeline flowchart](https://u.cubeupload.com/MakeTheBrainHappy/Figure2v4.png)
+![pipeline flowchart](./flowchart.svg)
 
 ---
 
