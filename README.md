@@ -12,6 +12,7 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
   - [General Usage](#general-usage)
   - [Details on the output](#details-on-the-output)
   - [Troubleshooting Guide](#troubleshooting-guide)
+  - [Update Log](#update-log)
   - [Citation](#citation)
   - [Contributors](#contributors)
 
@@ -146,6 +147,12 @@ The pipeline will save all outputs to the relevant folders. If the default file 
 ---
 
 ### Troubleshooting Guide
+
+to be added.
+
+---
+
+### Update Log
 
 to be added.
 
