@@ -65,6 +65,8 @@ No pipeline program requires these optional upgrades, which allow for speedier r
 ### Pipeline Flowchart 
 ![pipeline flowchart](./flowchart_updated.svg)
 
+**Overview of L-RAPiT components and workflow** Colors reflect the general purpose of each program: core elements of the pipeline are shown in blue; quality control programs in green; visualization programs in red; region-specific programs in purple; and other optional pipeline components in yellow. Arrows indicate the use of output from one program as input for another.
+
 ---
 
 ### Features
