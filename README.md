@@ -29,7 +29,7 @@ Within Google Colaboratory, reference genomes and annotations can be downloaded 
 
 #### For Users with Unlimited Google Drive Storage
 
-It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing. Once installation is complete, users should open ```long_read_rna_seq_analysis.ipynb``` to begin working with the pipeline. For first-time users Colaboratory can be installed as follows in Google Drive:  ```NEW``` => ```MORE``` => ```+ Connect more apps``` => Search ```Colaboratory```. Please make sure that the ```$PIPELINE_FILE_PATH``` variable matches between your installation and pipeline script. By default, this is set to ```/content/drive/MyDrive```.
+It is recommended that users install the pipeline and reference genome directly into their Google Drive by following the instructions in this short Colab notebook: https://colab.research.google.com/drive/1CeGSw-tFIPaiXbELoTEvcraIfoeS646x?usp=sharing. Once installation is complete, users should open the above notebook to begin working with the pipeline. For first-time users Colaboratory can be installed as follows in Google Drive:  ```NEW``` => ```MORE``` => ```+ Connect more apps``` => Search ```Colaboratory```. Please make sure that the ```$PIPELINE_FILE_PATH``` variable matches between your installation and pipeline script. By default, this is set to ```/content/drive/MyDrive```.
 
 #### Local Installations
 
