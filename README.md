@@ -160,7 +160,7 @@ to be added.
 
 ### Citation
 
-to be added.
+Nelson, T.M.; Ghosh, S.; Postler, T.S. L-RAPiT: A Cloud-Based Computing Pipeline for the Analysis of Long-Read RNA Sequencing Data. _Int. J. Mol. Sci._ **2022**, _23_, 15851. https://doi.org/10.3390/ijms232415851 
 
 ---
 
