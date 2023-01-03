@@ -154,7 +154,7 @@ to be added.
 
 ### Update Log
 
-to be added.
+**01-03-2022**: updated the Kingfisher installation module to the latest version; updated the reference genomes to the latest version, according to [NCBI Genome Reference Consortium](https://www.ncbi.nlm.nih.gov/grc). 
 
 ---
 
