@@ -16,6 +16,8 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
   - [Citation](#citation)
   - [Contributors](#contributors)
 
+![pipeline-banner](./L-RAPiT_banner_art.svg)
+
 ---
 
 ### Installation
