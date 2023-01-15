@@ -22,6 +22,8 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
 
 ### Installation
 
+We recommend our QuickStart video for first-time users: https://youtu.be/DG1WjENpLO8 
+
 #### Google Colaboratory 
 
 Open the following notebook (requires a Google Account): https://colab.research.google.com/drive/1yohU_xl0gl9LFHfK9AECRSKY7rO20DCP (that's it!)
