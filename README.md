@@ -26,7 +26,7 @@ We recommend our QuickStart video for first-time users: https://youtu.be/DG1WjEN
 
 #### Google Colaboratory 
 
-Open the following notebook (requires a Google Account): https://colab.research.google.com/drive/1yohU_xl0gl9LFHfK9AECRSKY7rO20DCP (that's it!)
+Open the following notebook (requires a Google Account): https://colab.research.google.com/drive/1NSjYj7yqKpLbh-aYz9kFe1hloasyt3rF (that's it!)
 
 #### Reference Genomes and Annotations
 
