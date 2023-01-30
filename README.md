@@ -1,3 +1,5 @@
+![pipeline-banner](./L-RAPiT_banner_art.svg)
+
 # L-RAPiT: Long Read Analysis Pipeline for Transcriptomics  
 
 A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and PacBio Sequencers, originally implemented and tested in Google Colaboratory.
@@ -19,6 +21,8 @@ A Cloud Pipeline to Analyze Long Read Sequencing Data from Oxford Nanopore and P
 ---
 
 ### Installation
+
+We recommend our QuickStart video for first-time users: https://youtu.be/DG1WjENpLO8 
 
 #### Google Colaboratory 
 
