@@ -160,7 +160,8 @@ to be added.
 
 ### Update Log
 
-**01-03-2022**: updated the Kingfisher installation module to the latest version; updated the reference genomes to the latest version, according to [NCBI Genome Reference Consortium](https://www.ncbi.nlm.nih.gov/grc). 
+**01-30-2023**: updated Kingfisher install to force Python 3.9 installation; updated default minimap2 aligner from version 2.17 to 2.23; separated minimap2 and samtools into separate conda environments; added the ``-I2G`` flag to minimap2 index minimization to ensure that the human reference genome can be processed into a multi-part index within the memory parameters of Google Colab; added the ``--split-prefix`` to minimap2 to perform alignment to a partioned index (according to https://doi.org/10.1038/s41598-019-40739-8 and https://github.com/lh3/minimap2/issues/887).<br>
+**01-03-2023**: updated the Kingfisher installation module to the latest version; updated the reference genomes to the latest version, according to [NCBI Genome Reference Consortium](https://www.ncbi.nlm.nih.gov/grc). 
 
 ---
 
